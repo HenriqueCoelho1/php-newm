@@ -1,0 +1,15 @@
+CREATE DATABASE db;
+
+USE db;
+
+CREATE TABLE IF NOT EXISTS users (
+    id SERIAL,
+    name VARCHAR(250) NOT NULL,
+    email VARCHAR(250) NOT NULL UNIQUE,
+    birth DATETIME NOT NULL,
+    phone VARCHAR(16) NOT NULL,
+    address VARCHAR(250) NOT NULL,
+    cpf VARCHAR(11) NOT NULL UNIQUE,
+    description LONGTEXT,
+    PRIMARY KEY(id)
+);
